@@ -1,0 +1,8 @@
+title: app-user
+appid: 6uja6oha86bl
+ver: 0.0.0
+cors:
+  Access-Control-Allow-Origin: "*"
+  Access-Control-Allow-Methods: "GET,POST"
+  Access-Control-Allow-Headers: "Trace"
+  
