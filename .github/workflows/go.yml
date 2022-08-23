@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: go build
-        run: docker run --rm -v $(pwd)/../..:/workdir -w "/workdir" docker.io/nginx/unit:1.27.0-go1.18 /workdir/.github/ci/build.sh
+        run: ./ci/build.sh
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{secrets.GITHUB_TOKEN}}"
