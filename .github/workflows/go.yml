@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: docker.io/nginx/unit:1.27.0-go1.18
     steps:
     - uses: actions/checkout@v3
 
