@@ -23,11 +23,4 @@ jobs:
 
     - name: Test
       run: go test -v ./...
-      
-      - name: Download a Build Artifact
-  uses: actions/download-artifact@v3.0.0
-  with:
-    # Artifact name
-    name: # optional
-    # Destination path
-    path: # optional
+
