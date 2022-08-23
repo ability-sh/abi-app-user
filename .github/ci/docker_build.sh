@@ -1,6 +1,8 @@
 #!/bin/sh
 
 go mod tidy
-go build
+go build -o abi-app-user
+
+ls -al
 
 
