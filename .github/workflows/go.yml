@@ -9,19 +9,12 @@ on:
 jobs:
 
   build:
-    runs-on: docker.io/nginx/unit:1.27.0-go1.18
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Go
-      uses: actions/setup-go@v3
-      with:
-        go-version: 1.18
-
-    - name: go mod tidy
-      run: go mod tidy
-
     - name: go build
-      run: go build -v ./...
+      run: docker run --rm docker.io/nginx/unit:1.27.0-go1.18 -v "`pwd`:/workdir:rw" -w "/workdir" /workdir/.github/ci/build.sh
+      
 
 
