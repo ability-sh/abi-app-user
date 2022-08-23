@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: go build
-      run: docker run --rm docker.io/nginx/unit:1.27.0-go1.18 -v "`pwd`:/workdir:rw" -w "/workdir" /workdir/.github/ci/build.sh
-      
+      run: docker run --rm -v $(pwd):/workdir -w "/workdir" docker.io/nginx/unit:1.27.0-go1.18 /workdir/.github/ci/build.sh
+
 
 
